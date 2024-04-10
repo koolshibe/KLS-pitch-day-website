@@ -1,11 +1,16 @@
 :root {
   --white:#FFFFFF;
+  --bright-purple:#a600c7;
+  --bright-blue:#30d3df;
 }
 
 html,
-body {
-  height:100%;
-  width:100%;
+body,
+section {
+  max-height:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  overflow-wrap:anywhere;
 }
 
 * {

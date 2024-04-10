@@ -1,0 +1,19 @@
+.h1 {
+  position:absolute;
+  text-align:center;
+  font-size:calc(80vh - 40px);
+  color:var(--bright-blue);
+  margin-top:10px;
+  left:25px;
+  overflow-wrap: anywhere;
+}
+.h2 {
+  position:absolute;
+  font-size:20vh;
+  padding-top:10px;
+  bottom:10px;
+  overflow-wrap: break-word;
+}
+.boxtext {
+  color:var(--bright-purple) !important;
+}
