@@ -1,19 +1,35 @@
 .h1 {
   position:absolute;
+  font-size:30vw;
   text-align:center;
-  font-size:calc(80vh - 40px);
   color:var(--bright-blue);
-  margin-top:10px;
+  margin-top:0px;
+  margin-bottom:10px;
+  top:10px;
   left:25px;
   overflow-wrap: anywhere;
 }
 .h2 {
   position:absolute;
-  font-size:20vh;
+  font-size: calc(20vh - 20px);
   padding-top:10px;
   bottom:10px;
   overflow-wrap: break-word;
 }
+.section{
+  text-align-last:justify;
+  width:100%;
+}
 .boxtext {
-  color:var(--bright-purple) !important;
+  background: repeating-linear-gradient(45deg,var(--bright-purple),var(--bright-purple) 10px,var(--white) 10px,var(--white) 20px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bebasneue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.svg {
+  width:100%;
 }
