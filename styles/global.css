@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Prata&display=swap');
 
 :root {
   --white:#FFFFFF;
@@ -10,7 +10,6 @@ html,
 body {
   max-height:100%;
   max-width:100%;
-  overflow-x:hidden;
   overflow-wrap:anywhere;
 }
 

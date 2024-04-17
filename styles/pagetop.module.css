@@ -1,17 +1,18 @@
 .h1 {
-  position:absolute;
-  font-size:30vw;
-  text-align:center;
-  color:var(--bright-blue);
-  margin-top:0px;
-  margin-bottom:10px;
+  position: sticky;
   top:10px;
-  left:25px;
-  overflow-wrap: anywhere;
+  margin-top:0px;
+  font-size:80vh;
+  text-align:center;
+  line-height:60vh;
+  background: repeating-linear-gradient(45deg,var(--bright-purple),var(--bright-purple) 10px,var(--white) 10px,var(--white) 20px), var(--bright-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .h2 {
-  position:absolute;
-  font-size: calc(20vh - 20px);
+  position:absolute !important;
+  font-size:20vh;
+  line-height:12vh;
   padding-top:10px;
   bottom:10px;
   overflow-wrap: break-word;
@@ -19,17 +20,15 @@
 .section{
   text-align-last:justify;
   width:100%;
+  height:calc(100vh + 100vw);
 }
-.boxtext {
-  background: repeating-linear-gradient(45deg,var(--bright-purple),var(--bright-purple) 10px,var(--white) 10px,var(--white) 20px);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.prataregular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .bebasneue {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-.svg {
-  width:100%;
 }
