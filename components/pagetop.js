@@ -12,7 +12,6 @@ export default function Pagetop() {
   return (
     <section className={styles.section}>
       <h1 className={`${styles.h1} ${styles.bebasneue}`} id={"striped"}>Innovate</h1>
-      <h2 className={`${styles.h2} ${styles.prataregular}`}>KLS Pitch Day</h2>
     </section>
   );
 }

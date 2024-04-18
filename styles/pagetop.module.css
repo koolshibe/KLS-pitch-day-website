@@ -22,7 +22,6 @@
 .section{
   text-align-last:justify;
   width:100%;
-  height:calc(100vh + 100vw);
 }
 .prataregular {
   font-family: "Prata", serif;
