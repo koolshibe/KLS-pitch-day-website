@@ -8,13 +8,26 @@ export const stripeScroll = () => {
 }
 
 export const mouseScroll = () => {
-  const tl2 = new gsap.timeline({ scrollTrigger: {
+  const tl = new gsap.timeline({ scrollTrigger: {
     ease:"none",
     trigger:"#striped",
     pin:true,
     start:"top top",
-    end:"+=10000px",
+    end:"+=500vh",
     scrub: 1
   }});
-  tl2.from("#striped", {backgroundSize:"0%", duration:0}).to("#striped", {backgroundSize:"100%", duration:1});
+  tl.from("#striped", {backgroundSize:"0%", duration:0}).to("#striped", {backgroundSize:"100%", duration:1});
+}
+
+export const atScroll = () => {
+  const tl = new gsap.timeline({ scrollTrigger:{
+    ease:"none",
+    trigger:"#at",
+    pin:true,
+    start:0,
+    end:"+=500vh",
+    scrub: 1
+  }});
+  tl.from("#at", {strokeDashoffset:"1000px",x:"0vw", duration:0});
+  tl.to("#at", {strokeDashoffset:"2000px",x:window.innerWidth-300, duration:1});
 }
