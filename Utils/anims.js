@@ -20,14 +20,27 @@ export const mouseScroll = () => {
 }
 
 export const atScroll = () => {
+  const body = document.querySelector("body");
   const tl = new gsap.timeline({ scrollTrigger:{
     ease:"none",
     trigger:"#at",
     pin:true,
     start:0,
     end:"+=500vh",
-    scrub: 1
+    scrub:1,
+    onLeave: ({}) => {
+      body.style.overflow="hidden";
+      gsap.to("#at", {x:0, rotation:360, duration:2.5, ease:"bounce.out", onComplete() {
+        body.style.overflow="auto";
+      }})
+    },
+    onEnterBack: ({}) => {
+      body.style.overflow="hidden";
+      gsap.fromTo("#at", {x:0},{x:window.innerWidth-300, duration:1, onComplete() {
+        body.style.overflow="auto";
+      }})
+    }
   }});
-  tl.from("#at", {strokeDashoffset:"1000px",x:"0vw", duration:0});
+  tl.from("#at", {strokeDashoffset:"1000px",x:0, duration:0});
   tl.to("#at", {strokeDashoffset:"2000px",x:window.innerWidth-300, duration:1});
 }
