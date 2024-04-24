@@ -2,5 +2,6 @@
   stroke-dasharray:1000px;
   stroke-dashoffset:1000px;
   position:absolute;
-  bottom:0px; 
+  bottom:0px;
+  transform-origin: center;
 }

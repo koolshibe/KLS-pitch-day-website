@@ -16,6 +16,7 @@ export default function Pagetop() {
       <h6>Scroll</h6>
       <h1 className={`${styles.h1} ${styles.bebasneue}`} id={"striped"}>Innovate</h1>
       <Svg></Svg>
+      <h2 className={`${styles.h2} ${styles.prataregular}`} id={"register"}>KLS pitch day</h2>
     </section>
   );
 }

@@ -32,15 +32,17 @@ export const atScroll = () => {
       body.style.overflow="hidden";
       gsap.to("#at", {x:0, rotation:360, duration:2.5, ease:"bounce.out", onComplete() {
         body.style.overflow="auto";
-      }})
+      }});
+      gsap.fromTo("#register",{y:0, opacity:0},{y:"65vh", opacity:1, delay:2.5});
     },
     onEnterBack: ({}) => {
       body.style.overflow="hidden";
-      gsap.fromTo("#at", {x:0},{x:window.innerWidth-300, duration:1, onComplete() {
+      gsap.fromTo("#at", {x:0},{x:body.clientWidth-300, duration:1, onComplete() {
         body.style.overflow="auto";
-      }})
+      }});
+      gsap.to("#register",{y:0, opacity:0});
     }
   }});
   tl.from("#at", {strokeDashoffset:"1000px",x:0, duration:0});
-  tl.to("#at", {strokeDashoffset:"2000px",x:window.innerWidth-300, duration:1});
+  tl.to("#at", {strokeDashoffset:"2000px",x:body.clientWidth-300, duration:1});
 }
