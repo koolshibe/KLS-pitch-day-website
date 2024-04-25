@@ -1,0 +1,9 @@
+.navcontainer {
+  display:inline-block;
+  position:absolute;
+  z-index:100;
+  top:0;
+}
+.navcontainer ul>a {
+  margin-left:10px;
+}

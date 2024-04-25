@@ -10,7 +10,8 @@
   background-repeat:repeat-y;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  z-index:100;
+  z-index:2;
+  user-select: none;
 }
 .h2 {
   position:absolute;
@@ -38,4 +39,17 @@
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.roboto {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.simpletext {
+  text-align:center;
+  margin:auto;
+  color:gray;
+  position:relative;
+  z-index:5;
 }

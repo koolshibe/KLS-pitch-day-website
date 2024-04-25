@@ -21,6 +21,7 @@ export const mouseScroll = () => {
 
 export const atScroll = () => {
   const body = document.querySelector("body");
+  const svg = document.querySelector("#at");
   const tl = new gsap.timeline({ scrollTrigger:{
     ease:"none",
     trigger:"#at",
@@ -33,7 +34,8 @@ export const atScroll = () => {
       gsap.to("#at", {x:0, rotation:360, duration:2.5, ease:"bounce.out", onComplete() {
         body.style.overflow="auto";
       }});
-      gsap.fromTo("#register",{y:0, opacity:0},{y:"65vh", opacity:1, delay:2.5});
+      console.log(window.pageYoffset);
+      gsap.fromTo("#register",{y:0, opacity:0},{y:window.pageYOffset, opacity:1, delay:2.5});
     },
     onEnterBack: ({}) => {
       body.style.overflow="hidden";
@@ -45,4 +47,29 @@ export const atScroll = () => {
   }});
   tl.from("#at", {strokeDashoffset:"1000px",x:0, duration:0});
   tl.to("#at", {strokeDashoffset:"2000px",x:body.clientWidth-300, duration:1});
+}
+
+export const refresh = () => {
+  onresize = (event) => {
+    ScrollTrigger.refresh();
+  };
+}
+
+export const scrollTeller = () => {
+  const tl = new gsap.timeline({ repeat:-1 });
+  const teller = document.querySelector("#teller");
+  tl.fromTo("#teller", {opacity:0.2},{opacity:1});
+  tl.yoyo(true);
+  teller.onclick = function(){
+    var distanceToScroll = window.innerheight;
+    var speed = 5;
+
+    var scrollInterval = setInterval(function() {
+        window.scrollBy(0, speed);
+
+        if (window.pageYOffset >= distanceToScroll) {
+            clearInterval(scrollInterval);
+        }
+    }, 16);
+  };
 }
