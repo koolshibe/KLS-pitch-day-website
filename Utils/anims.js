@@ -12,7 +12,7 @@ export const mouseScroll = () => {
     ease:"none",
     trigger:"#striped",
     pin:true,
-    start:"top top",
+    start:0,
     end:"+=500vh",
     scrub: 1
   }});
@@ -72,4 +72,15 @@ export const scrollTeller = () => {
         }
     }, 16);
   };
+}
+
+export const navScroll = () => {
+  const tl = new gsap.timeline({
+    scrollTrigger: {
+      ease:"none",
+      trigger:"#nav",
+      start:"500vh top"
+    }
+  });
+  tl.fromTo("#nav", {opacity:0, duration:0}, {opacity:1, duration:1, delay:3.5});
 }

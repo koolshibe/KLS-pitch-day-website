@@ -5,12 +5,14 @@ import Layout from "/components/layout.js";
 import AboutText from "/components/abouttext.js";
 import { useEffect } from "react";
 import { refresh } from "/Utils/anims.js";
+import { navScroll } from "/Utils/anims.js";
 
 
 export default function Home() {
   useEffect (() => {
     refresh();
-  }, [])
+    navScroll();
+  }, []);
   return (
     <Layout>
       <Head>

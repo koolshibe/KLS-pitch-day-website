@@ -1,9 +1,17 @@
 .navcontainer {
   display:inline-block;
-  position:absolute;
+  position:fixed;
   z-index:100;
   top:0;
+  left:0;
+  background-color:var(--light-gray);
+  margin:0px 0px 0px 0px;
+  width:100%;
 }
 .navcontainer ul>a {
   margin-left:10px;
+}
+.navcontainer ul {
+  margin:5px 5px 5px 5px;
+  padding-left:20px;
 }
