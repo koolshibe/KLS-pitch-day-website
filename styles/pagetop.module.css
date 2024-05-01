@@ -4,7 +4,7 @@
   margin-top:0px;
   font-size:33vw;
   text-align:center;
-  line-height:60vh;
+  line-height:66vh;
   background: repeating-linear-gradient(45deg,var(--bright-purple),var(--bright-purple) 10px,var(--white) 10px,var(--white) 20px), var(--bright-blue);
   background-size:100%;
   background-repeat:repeat-y;
@@ -12,6 +12,7 @@
   -webkit-text-fill-color: transparent;
   z-index:2;
   user-select: none;
+  height:60vh;
 }
 .h2 {
   position:absolute;

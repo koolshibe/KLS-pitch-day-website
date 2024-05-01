@@ -34,7 +34,6 @@ export const atScroll = () => {
       gsap.to("#at", {x:0, rotation:360, duration:2.5, ease:"bounce.out", onComplete() {
         body.style.overflow="auto";
       }});
-      console.log(window.pageYoffset);
       gsap.fromTo("#register",{y:0, opacity:0},{y:window.pageYOffset, opacity:1, delay:2.5});
     },
     onEnterBack: ({}) => {
@@ -61,7 +60,7 @@ export const scrollTeller = () => {
   tl.fromTo("#teller", {opacity:0.2},{opacity:1});
   tl.yoyo(true);
   teller.onclick = function(){
-    var distanceToScroll = window.innerheight;
+    var distanceToScroll = window.innerHeight;
     var speed = 5;
 
     var scrollInterval = setInterval(function() {
@@ -71,6 +70,7 @@ export const scrollTeller = () => {
             clearInterval(scrollInterval);
         }
     }, 16);
+    onwheel = function() {clearInterval(scrollInterval)};
   };
 }
 
@@ -83,4 +83,22 @@ export const navScroll = () => {
     }
   });
   tl.fromTo("#nav", {opacity:0, duration:0}, {opacity:1, duration:1, delay:3.5});
+}
+export const toRegister = () => {
+  const tl = new gsap.timeline({ scrollTrigger: {
+    ease:"power2.in",
+    trigger:"#nav",
+    start:"550vh top",
+    markers:true
+  }});
+  const displayText = document.querySelector("#striped");
+  var chars = "INNOVATE";
+  displayText.innerHTML = chars.split("").map(function(el, i) {
+    return `<span class="Letter" style="display:inline-block">${el}</span>`;
+  }).join('');
+  chars = "REGISTER";
+  displayText.innerHTML += chars.split("").map(function(el, i) {
+    return `<span class="LetterTwo" style="display:inline-block">${el}</span>`;
+  }).join('');
+  tl.add("start").to(".Letter", {y:"-100%", duration:1, stagger:0.1}, "start").to(".LetterTwo", {y:"-100%", duration:1, stagger:0.1}, "start");
 }
